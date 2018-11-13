@@ -1,0 +1,19 @@
+{
+  "name": "vtex.my-account-commons",
+  "scripts": {
+    "test": "vtex-scripts test"
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-intl": "^2.4.0",
+    "react-router-dom": "^4.3.1",
+    "react-router-prop-types": "^1.0.4"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1"
+  },
+  "vtexScriptsOverride": {
+    "srcPath": "."
+  }
+}
