@@ -28,7 +28,7 @@ class ContentWrapper extends Component {
       backButton,
       history,
       headerContent,
-      nameSpace,
+      namespace,
     } = this.props
     const { shouldShowError } = this.state
 
@@ -51,7 +51,7 @@ class ContentWrapper extends Component {
           </PageHeader>
         </header>
         <main
-          className={`vtex-account__page-body ${nameSpace} center w-100 pt6 flex justify-around`}>
+          className={`vtex-account__page-body ${namespace} center w-100 pt6 flex justify-around`}>
           {shouldShowError && (
             <GenericError
               onDismiss={this.handleDismissError}
@@ -68,7 +68,7 @@ class ContentWrapper extends Component {
 ContentWrapper.propTypes = {
   intl: intlShape.isRequired,
   children: PropTypes.func.isRequired,
-  nameSpace: PropTypes.string.isRequired,
+  namespace: PropTypes.string.isRequired,
   title: PropTypes.string,
   titleId: PropTypes.string,
   backButton: PropTypes.shape({

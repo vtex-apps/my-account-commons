@@ -21,7 +21,10 @@ import {
 You can use it in your code like a React component with the jsx tag: `<ContentWrapper>`.
 
 ```jsx
-<ContentWrapper title={`${orderTitle} ${orderNumber}`} backButton={backButton}>
+<ContentWrapper
+  namespace="my-custom-page"
+  title={`${orderTitle} ${orderNumber}`}
+  backButton={backButton}>
   {({ handleError }) => children}
 </ContentWrapper>
 ```
@@ -34,6 +37,7 @@ You can use it in your code like a React component with the jsx tag: `<ContentWr
 | `backbutton.titleId` | `String`  | Intl message id that will be translated and inserted as the go back message. |
 | `backbutton.path`    | `String!` | Location which the user will be lead to when hit the backbutton.             |
 | `headerContent`      | `node`    | JSX that wil be inserted as children of the `vtex.style-guide/PageHeader`.   |
+| `namespace`          | `String!` | Css namespace that will be added to the page body.                           |
 
 The `ContentWrapper` uses the render prop pattern and returns to its children an object with the following props:
 
