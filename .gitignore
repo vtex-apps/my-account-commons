@@ -5,13 +5,10 @@
 
 # testing
 /coverage
-styleguide-visual/*.new.png
-styleguide-visual/*.diff.png
 
 # production
 /build
 /lib
-/styleguide
 
 # misc
 .DS_Store
@@ -27,3 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 package-lock.json
+yarn.lock
