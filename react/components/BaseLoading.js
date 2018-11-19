@@ -9,7 +9,7 @@ class BaseLoading extends Component {
     isLoading: true,
   }
 
-  componentDidUpdate = (prevProps) => {
+  componentDidUpdate = prevProps => {
     if (prevProps.queryData.loading !== this.props.queryData.loading) {
       this.setState({ isLoading: false })
     }

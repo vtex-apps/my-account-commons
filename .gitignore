@@ -1,44 +1,29 @@
-### SublimeText ###
-*.sublime-workspace
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
-### VS Code ###
-*.vscode
+# dependencies
+/node_modules
 
-### OSX ###
+# testing
+/coverage
+styleguide-visual/*.new.png
+styleguide-visual/*.diff.png
+
+# production
+/build
+/lib
+/styleguide
+
+# misc
 .DS_Store
-.AppleDouble
-.LSOverride
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-### Windows ###
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# App specific
-node_modules/
-docs/_book/
-.tmp
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vscode
 .idea
-npm-debug.log
-.build/
-lib
-dist
-build
-lerna-debug.log
-yarn-error.log
-*.orig
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
 package-lock.json
