@@ -32,7 +32,7 @@ class BaseLoading extends Component {
       queryData.error.toString().indexOf('not authenticated') > -1
 
     return (
-      <ContentWrapper namespace="vtex.base-loading" {...headerConfig}>
+      <ContentWrapper namespace="vtex-base-loading" {...headerConfig}>
         {() => (
           <Fragment>
             {isLoading ? (
