@@ -58,10 +58,12 @@ the loader Skeleton or an error message if any error occurs with retry option to
 </BaseLoading>
 ```
 
-| Prop name      | Type            | Description                                            |
-| -------------- | --------------- | ------------------------------------------------------ |
-| `queryData`    | `QueryResult`   | Apollo Graphql query result.                           |
-| `headerConfig` | `ContentWProps` | The props that will be passed to the `ContentWrapper`. |
+| Prop name      | Type            | Description                                                                                                       |
+| -------------- | --------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `queryData`    | `QueryResult`   | Apollo Graphql query result.                                                                                      |
+| `headerConfig` | `ContentWProps` | The props that will be passed to the `ContentWrapper`.                                                            |
+| `nameSpace`    | `String`        | The name space prop that will be passed to the `ContentWrapper`. `vtex-base-loading` is applied if none is passed |
+| `parseError`   | `Function`      | Function that parses the graphql error and returns a messageId.                                                   |
 
 ### GenericError
 
