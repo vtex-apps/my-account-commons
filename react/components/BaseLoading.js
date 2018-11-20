@@ -68,11 +68,22 @@ class BaseLoading extends Component {
   }
 }
 
+const headerConfigPropTypes = PropTypes.shape({
+  title: PropTypes.string,
+  titleId: PropTypes.string,
+  backButton: PropTypes.shape({
+    title: PropTypes.string,
+    titleId: PropTypes.string,
+    path: PropTypes.string.isRequired,
+  }),
+  headerContent: PropTypes.node,
+})
+
 BaseLoading.propTypes = {
   namespace: PropTypes.string,
   parseError: PropTypes.func,
   queryData: PropTypes.any.isRequired,
-  headerConfig: PropTypes.object.isRequired,
+  headerConfig: headerConfigPropTypes.isRequired,
   children: PropTypes.any.isRequired,
 }
 
