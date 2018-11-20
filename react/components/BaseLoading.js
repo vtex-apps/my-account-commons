@@ -25,25 +25,39 @@ class BaseLoading extends Component {
 
   render() {
     const { isLoading } = this.state
-    const { headerConfig, children, queryData } = this.props
+    const {
+      headerConfig,
+      children,
+      queryData,
+      namespace,
+      parseError,
+    } = this.props
 
-    const hasAuthenticationError =
-      queryData.error &&
-      queryData.error.toString().indexOf('not authenticated') > -1
+    let errorMessageId
+    if (queryData.error) {
+      if (parseError) {
+        errorMessageId = parseError(queryData.error)
+      }
+
+      if (!errorMessageId) {
+        errorMessageId =
+          queryData.error.toString().indexOf('not authenticated') > -1
+            ? 'alert.unauthenticated'
+            : 'alert.connectionError'
+      }
+    }
 
     return (
-      <ContentWrapper namespace="vtex-base-loading" {...headerConfig}>
+      <ContentWrapper
+        namespace={namespace || 'vtex-base-loading'}
+        {...headerConfig}>
         {() => (
           <Fragment>
             {isLoading ? (
               children
             ) : (
               <ReloadableError
-                errorId={
-                  hasAuthenticationError
-                    ? 'alert.unauthenticated'
-                    : 'alert.connectionError'
-                }
+                errorId={errorMessageId}
                 onReload={this.handleReload}
               />
             )}
@@ -55,6 +69,8 @@ class BaseLoading extends Component {
 }
 
 BaseLoading.propTypes = {
+  namespace: PropTypes.string,
+  parseError: PropTypes.func,
   queryData: PropTypes.any.isRequired,
   headerConfig: PropTypes.object.isRequired,
   children: PropTypes.any.isRequired,
