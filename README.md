@@ -55,7 +55,7 @@ the loader Skeleton or an error message if any error occurs with retry option to
 
 ### GenericError
 
-A wrapper for the `vtex.style-guide/Alert` component.
+A wrapper for the `vtex.styleguide/Alert` component.
 
 ```jsx
 <GenericError onDismiss={handleError} errorId={error} />
