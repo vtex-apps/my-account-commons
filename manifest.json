@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "my-account-commons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "title": "MyAccount Commons",
   "defaultLocale": "pt-BR",
   "description": "Shared components used to build ne MyAccounts pages",
@@ -10,7 +10,9 @@
   },
   "mustUpdateAt": "2019-04-02",
   "categories": [],
-  "registries": ["smartcheckout"],
+  "registries": [
+    "smartcheckout"
+  ],
   "settingsSchema": {},
   "scripts": {
     "postreleasy": "vtex publish --verbose"
