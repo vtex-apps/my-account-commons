@@ -11,8 +11,7 @@ const ReloadableError = ({ errorId, onReload, intl }) => {
         action={{
           label: intl.formatMessage({ id: 'alert.reload' }),
           onClick: onReload,
-        }}
-      >
+        }}>
         {intl.formatMessage({ id: errorId })}
       </Alert>
     </div>

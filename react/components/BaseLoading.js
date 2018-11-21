@@ -9,7 +9,7 @@ class BaseLoading extends Component {
     isLoading: true,
   }
 
-  componentDidUpdate = (prevProps) => {
+  componentDidUpdate = prevProps => {
     if (prevProps.queryData.loading !== this.props.queryData.loading) {
       this.setState({ isLoading: false })
     }
@@ -32,7 +32,7 @@ class BaseLoading extends Component {
       queryData.error.toString().indexOf('not authenticated') > -1
 
     return (
-      <ContentWrapper {...headerConfig}>
+      <ContentWrapper namespace="vtex-base-loading" {...headerConfig}>
         {() => (
           <Fragment>
             {isLoading ? (

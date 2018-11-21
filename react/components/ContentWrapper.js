@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom'
 import ReactRouterPropTypes from 'react-router-prop-types'
 import { injectIntl, intlShape } from 'react-intl'
 import { PageHeader } from 'vtex.styleguide'
-
 import GenericError from './GenericError'
 
 class ContentWrapper extends Component {
@@ -21,7 +20,16 @@ class ContentWrapper extends Component {
   }
 
   render() {
-    const { children, intl, title, titleId, backButton, history, headerContent } = this.props
+    const {
+      children,
+      intl,
+      title,
+      titleId,
+      backButton,
+      history,
+      headerContent,
+      namespace,
+    } = this.props
     const { shouldShowError } = this.state
 
     return (
@@ -31,15 +39,19 @@ class ContentWrapper extends Component {
             title={title || intl.formatMessage({ id: titleId })}
             linkLabel={
               backButton
-                ? (backButton.title ? backButton.title : intl.formatMessage({ id: backButton.titleId }))
+                ? backButton.title
+                  ? backButton.title
+                  : intl.formatMessage({ id: backButton.titleId })
                 : intl.formatMessage({ id: 'commons.back' })
             }
-            onLinkClick={() => history.push(backButton ? backButton.path : '/')}
-          >
+            onLinkClick={() =>
+              history.push(backButton ? backButton.path : '/')
+            }>
             {headerContent}
           </PageHeader>
         </header>
-        <main className="vtex-account__page-body center w-100 pt6 flex justify-around">
+        <main
+          className={`vtex-account__page-body ${namespace} center w-100 pt6 flex justify-around`}>
           {shouldShowError && (
             <GenericError
               onDismiss={this.handleDismissError}
@@ -56,6 +68,7 @@ class ContentWrapper extends Component {
 ContentWrapper.propTypes = {
   intl: intlShape.isRequired,
   children: PropTypes.func.isRequired,
+  namespace: PropTypes.string.isRequired,
   title: PropTypes.string,
   titleId: PropTypes.string,
   backButton: PropTypes.shape({
