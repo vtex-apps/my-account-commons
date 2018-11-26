@@ -3,5 +3,7 @@
   "alert.unauthenticated": "You need to be authenticated to proceed with this action.",
   "alert.reload": "Reload",
   "alert.unknownError": "An error occurred, try again.",
-  "commons.back": "Return"
+  "commons.back": "Return",
+  "progressBar.package.progress": "Package status",
+  "progressBar.order.status": "Order status"
 }

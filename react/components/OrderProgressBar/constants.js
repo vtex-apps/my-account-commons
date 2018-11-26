@@ -1,0 +1,25 @@
+export const ACTIVE = 'ACTIVE'
+
+export const FIRST_STEP = 0
+export const SECOND_STEP = 1
+export const THIRD_STEP = 2
+export const FOURTH_STEP = 3
+export const FIFTH_STEP = 4
+
+export const packageProgressBarStates = [
+  {
+    todo: 'package.progress.handleShipping',
+    done: 'package.progress.shippingHandled',
+    doing: 'package.progress.handlingShipping',
+  },
+  {
+    todo: 'package.progress.deliverToCarrier',
+    done: 'package.progress.delivered',
+    doing: 'package.progress.delivering',
+  },
+  {
+    todo: 'package.progress.ship',
+    done: 'package.progress.shipped',
+    doing: 'package.progress.shipping',
+  },
+]

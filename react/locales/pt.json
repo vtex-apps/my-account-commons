@@ -3,5 +3,7 @@
   "alert.unauthenticated": "Você precisa se identificar para realizar esta ação.",
   "alert.reload": "Recarregar",
   "alert.unknownError": "Ocorreu um erro, tente novamente.",
-  "commons.back": "Voltar"
+  "commons.back": "Voltar",
+  "progressBar.package.progress": "Status do pacote",
+  "progressBar.order.status": "Status do pedido"
 }

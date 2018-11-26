@@ -3,5 +3,7 @@
   "alert.unauthenticated": "Vous devez être authentifié pour poursuivre cette action.",
   "alert.reload": "Recharger",
   "alert.unknownError": "Une erreur est survenue, réessayez.",
-  "commons.back": "Retour"
+  "commons.back": "Retour",
+  "progressBar.package.progress": "Status du paquet",
+  "progressBar.order.status": "Status de la commande"
 }
