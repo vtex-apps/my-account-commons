@@ -3,5 +3,7 @@
   "alert.unauthenticated": "Trebuie să fiți autentificat pentru a continua această acțiune.",
   "alert.reload": "Reîncarcă",
   "alert.unknownError": "A apărut o eroare, încercați din nou.",
-  "commons.back": "Întoarcere"
+  "commons.back": "Întoarcere",
+  "progressBar.package.progress": "Starea pachetului",
+  "progressBar.order.status": "Status Comandă"
 }
