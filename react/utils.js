@@ -1,7 +1,8 @@
 import React from 'react'
+import reduce from 'lodash/reduce'
 import { FormattedMessage } from 'react-intl'
 
-export default deliveryPackage => {
+export function estimateShipping(deliveryPackage) {
   const {
     shippingEstimate: slaShippingEstimate,
     shippingEstimateDate: slaShippingEstimateDate,
@@ -37,4 +38,49 @@ export default deliveryPackage => {
     }
   }
   return shippingEstimate
+}
+
+export function reduceBundleItems(items) {
+  return reduce(
+    items,
+    (acc, item) => {
+      acc = acc.concat(item)
+      acc = acc.concat(...checkForAttachments(item))
+
+      if (item.bundleItems && item.bundleItems.length > 0) {
+        acc = acc.concat(
+          item.bundleItems.map(bundleItem =>
+            addBundleItemFlagAndParentItemQuantity(item, bundleItem)
+          )
+        )
+        acc = acc.concat(...item.bundleItems.map(checkForAttachments))
+      }
+
+      return acc
+    },
+    []
+  )
+}
+
+function checkForAttachments(item) {
+  if (item.attachments && item.attachments.length > 0) {
+    return item.attachments.map(addAttachmentFlag)
+  }
+
+  return []
+}
+
+function addAttachmentFlag(attachment) {
+  return {
+    ...attachment,
+    isAttachment: true,
+  }
+}
+
+function addBundleItemFlagAndParentItemQuantity(product, bundleItem) {
+  return {
+    ...bundleItem,
+    parentItemQuantity: product.quantity,
+    isBundleItem: true,
+  }
 }
