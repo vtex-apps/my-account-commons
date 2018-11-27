@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 import ReactRouterPropTypes from 'react-router-prop-types'
 import { injectIntl, intlShape } from 'react-intl'
 import { PageHeader } from 'vtex.styleguide'
+
 import GenericError from './GenericError'
 
 class ContentWrapper extends Component {
