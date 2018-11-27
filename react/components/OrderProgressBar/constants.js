@@ -6,6 +6,34 @@ export const THIRD_STEP = 2
 export const FOURTH_STEP = 3
 export const FIFTH_STEP = 4
 
+export const progressBarStates = [
+  {
+    todo: 'order.progress.confirmOrder',
+    done: 'order.progress.orderConfirmed',
+    doing: 'order.progress.confirmingOrder',
+  },
+  {
+    todo: 'order.progress.approvePayment',
+    done: 'order.progress.paymentApproved',
+    doing: 'order.progress.approvingPayment',
+  },
+  {
+    todo: 'order.progress.handleShipping',
+    done: 'order.progress.shippingHandled',
+    doing: 'order.progress.handlingShipping',
+  },
+  {
+    todo: 'order.progress.deliverToCarrier',
+    done: 'order.progress.delivered',
+    doing: 'order.progress.delivering',
+  },
+  {
+    todo: 'order.progress.ship',
+    done: 'order.progress.shipped',
+    doing: 'order.progress.shipping',
+  },
+]
+
 export const packageProgressBarStates = [
   {
     todo: 'package.progress.handleShipping',

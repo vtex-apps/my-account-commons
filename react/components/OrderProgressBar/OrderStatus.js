@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import getOrderProgress from './getOrderProgress'
@@ -6,7 +6,7 @@ import getOrderProgress from './getOrderProgress'
 class OrderStatus extends Component {
   render() {
     const { status, packages, render } = this.props
-    return <div>{render(getOrderProgress(status, packages))}</div>
+    return <Fragment>{render(getOrderProgress(status, packages))}</Fragment>
   }
 }
 
