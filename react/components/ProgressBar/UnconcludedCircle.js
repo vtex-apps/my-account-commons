@@ -24,7 +24,7 @@ const UnconcludedCircle = ({ label, intl, isPackage }) => (
 UnconcludedCircle.propTypes = {
   label: PropTypes.string.isRequired,
   intl: intlShape.isRequired,
-  isPackage: PropTypes.bool.isRequired,
+  isPackage: PropTypes.bool,
 }
 
 export default injectIntl(UnconcludedCircle)

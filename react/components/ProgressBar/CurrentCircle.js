@@ -26,7 +26,7 @@ const CurrentCircle = ({ label, intl, isPackage }) => (
 
 CurrentCircle.propTypes = {
   label: PropTypes.string.isRequired,
-  isPackage: PropTypes.bool.isRequired,
+  isPackage: PropTypes.bool,
   intl: intlShape.isRequired,
 }
 

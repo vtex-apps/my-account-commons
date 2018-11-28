@@ -14,8 +14,8 @@ class PackageStatus extends Component {
 PackageStatus.propTypes = {
   pack: PropTypes.any,
   render: PropTypes.func.isRequired,
-  status: PropTypes.number.isRequired,
-  packages: PropTypes.number.isRequired,
+  status: PropTypes.string.isRequired,
+  packages: PropTypes.array.isRequired,
 }
 
 export default PackageStatus

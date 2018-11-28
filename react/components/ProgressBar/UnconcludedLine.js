@@ -14,7 +14,7 @@ const UnconcludedLine = ({ isPackage }) => {
 }
 
 UnconcludedLine.propTypes = {
-  isPackage: PropTypes.bool.isRequired,
+  isPackage: PropTypes.bool,
 }
 
 export default UnconcludedLine
