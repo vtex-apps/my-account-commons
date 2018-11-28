@@ -2,7 +2,7 @@ import React from 'react'
 import reduce from 'lodash/reduce'
 import { FormattedMessage } from 'react-intl'
 
-export function estimateShipping(deliveryPackage) {
+function estimateShipping(deliveryPackage) {
   const {
     shippingEstimate: slaShippingEstimate,
     shippingEstimateDate: slaShippingEstimateDate,
@@ -40,7 +40,7 @@ export function estimateShipping(deliveryPackage) {
   return shippingEstimate
 }
 
-export function reduceBundleItems(items) {
+function reduceBundleItems(items) {
   return reduce(
     items,
     (acc, item) => {
@@ -62,17 +62,15 @@ export function reduceBundleItems(items) {
   )
 }
 
-export function fixImageUrl(
-  imageUrl,
-  width = DEFAULT_WIDTH,
-  height = DEFAULT_HEIGHT
-) {
+function fixImageUrl(imageUrl, width = DEFAULT_WIDTH, height = DEFAULT_HEIGHT) {
   return changeImageUrlSize(
     replaceHttpToRelativeProtocol(cleanImageUrl(imageUrl)),
     width,
     height
   )
 }
+
+export default { fixImageUrl, reduceBundleItems, estimateShipping }
 
 const DEFAULT_WIDTH = 50
 const DEFAULT_HEIGHT = 50
