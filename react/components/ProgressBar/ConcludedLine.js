@@ -12,7 +12,7 @@ const ConcludedLine = ({ isPackage }) => (
 )
 
 ConcludedLine.propTypes = {
-  isPackage: PropTypes.bool.isRequired,
+  isPackage: PropTypes.bool,
 }
 
 export default ConcludedLine
