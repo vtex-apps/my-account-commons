@@ -8,8 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
-- `estimageShipping` utility function.
-- `OrderProgressBar` componentes.
+- `util.js` utility functions.
+- `ProgressBar` componentes.
 
 ## [0.2.0] - 2018-11-21
 
