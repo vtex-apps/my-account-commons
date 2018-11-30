@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { intlShape, injectIntl } from 'react-intl'
 
@@ -16,7 +16,7 @@ class PackageProgressBar extends Component {
     if (currentState == null) return null
     const progressStates = transformStates(states)
     return (
-      <div>
+      <Fragment>
         <div className="myo-progress-bar flex w-100 mv2-s ml7-l">
           {progressStates.map((state, index) => {
             if (state.isLine) {
@@ -48,7 +48,7 @@ class PackageProgressBar extends Component {
             />
           </div>
         )}
-      </div>
+      </Fragment>
     )
   }
 }
