@@ -47,22 +47,22 @@ class BaseLoading extends Component {
       }
     }
 
+    const content = isLoading
+      ? children
+      : errorMessageId && (
+          <div className="mt7">
+            <ReloadableError
+              errorId={errorMessageId}
+              onReload={this.handleReload}
+            />
+          </div>
+        )
+
     return (
       <ContentWrapper
         namespace={namespace || 'vtex-base-loading'}
         {...headerConfig}>
-        {() => (
-          <Fragment>
-            {isLoading ? (
-              children
-            ) : (
-              <ReloadableError
-                errorId={errorMessageId}
-                onReload={this.handleReload}
-              />
-            )}
-          </Fragment>
-        )}
+        {() => <Fragment>{content}</Fragment>}
       </ContentWrapper>
     )
   }
