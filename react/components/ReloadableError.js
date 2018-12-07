@@ -5,16 +5,14 @@ import { Alert } from 'vtex.styleguide'
 
 const ReloadableError = ({ errorId, onReload, intl }) => {
   return (
-    <div className="mt7">
-      <Alert
-        type="error"
-        action={{
-          label: intl.formatMessage({ id: 'alert.reload' }),
-          onClick: onReload,
-        }}>
-        {intl.formatMessage({ id: errorId })}
-      </Alert>
-    </div>
+    <Alert
+      type="error"
+      action={{
+        label: intl.formatMessage({ id: 'alert.reload' }),
+        onClick: onReload,
+      }}>
+      {intl.formatMessage({ id: errorId })}
+    </Alert>
   )
 }
 
