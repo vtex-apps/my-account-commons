@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.0] - 2018-12-26
+
+### Added
+- Add `SkeletonBox` and `SkeletonPiece` components.
+
 ## [0.3.2] - 2018-12-07
 ### Fixed
 - `BaseLoading` display nothing when no error message was identified and is not loading anymore.
