@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.5.0] - 2018-12-28
+### Changed
+- Add Messages Builder.
+
 ## [0.4.0] - 2018-12-26
 
 ### Added
