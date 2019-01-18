@@ -18,6 +18,6 @@
     "postreleasy": "vtex publish --verbose"
   },
   "dependencies": {
-    "vtex.styleguide": "7.x"
+    "vtex.styleguide": "8.x"
   }
 }
