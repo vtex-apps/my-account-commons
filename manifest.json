@@ -6,18 +6,14 @@
   "defaultLocale": "pt-BR",
   "description": "Shared components used to build ne MyAccounts pages",
   "builders": {
-    "react": "2.x",
+    "react": "3.x",
     "messages": "0.x"
   },
   "mustUpdateAt": "2019-04-02",
-  "categories": [],
-  "registries": [
-    "smartcheckout"
-  ],
   "scripts": {
     "postreleasy": "vtex publish --verbose"
   },
   "dependencies": {
-    "vtex.styleguide": "7.x"
+    "vtex.styleguide": "9.x"
   }
 }
