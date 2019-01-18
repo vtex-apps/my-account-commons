@@ -51,8 +51,7 @@ class ContentWrapper extends Component {
             {headerContent}
           </PageHeader>
         </header>
-        <main
-          className={`vtex-account__page-body ${namespace} w-100 pa4-s`}>
+        <main className={`vtex-account__page-body ${namespace} w-100 pa4-s`}>
           {shouldShowError && (
             <div className="w-100 flex justify-around">
               <div className="w-50-ns w-80-s">
