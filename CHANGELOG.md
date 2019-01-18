@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+- Get changes made at version `v0.9.0`.
+
+## [1.0.1] - 2019-02-18
+### Changed
+- Update React builder to 3.x.
+- Bump vtex.styleguide to 9.x.
+
 ## [0.9.0] - 2019-03-18
 
 ### Added
