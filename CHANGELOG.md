@@ -7,11 +7,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Get changes made at version `v0.10.2`.
+
 ## [0.10.2] - 2019-08-20
 
 ### Fixed
 
 - Pickup order readiness conditional.
+
+## [1.2.1] - 2019-08-07
+
+### Changed
+
+- Get changes made at version `v0.10.1`.
 
 ## [0.10.1] - 2019-08-07
 
@@ -23,11 +33,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Handle for pickup delivery channel in **ProgressBar**.
 
+## [1.2.0] - 2019-04-29
+
+### Changed
+
+- Get changes made at version `v0.10.0`.
+
 ## [0.10.0] - 2019-04-29
 
 ### Changed
 
 - `SkeletonPiece` to receive size.
+
+## [1.1.2] - 2019-04-08
+
+### Changed
+
+- Get changes made at version `v0.9.2`.
 
 ## [0.9.2] - 2019-04-08
 
@@ -35,11 +57,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - `alert.connectionError` update message ca translation.
 
+## [1.1.1] - 2019-03-21
+
+### Changed
+
+- Get changes made at version `v0.9.1`.
+
 ## [0.9.1] - 2019-03-21
 
 ### Added
 
 - Router file
+
+## [1.1.0] - 2019-03-18
+
+### Changed
+
+- Get changes made at version `v0.9.0`.
+
+## [1.0.1] - 2019-02-18
+
+### Changed
+
+- Update React builder to 3.x.
+- Bump vtex.styleguide to 9.x.
 
 ## [0.9.0] - 2019-03-18
 

@@ -1,22 +1,21 @@
 {
   "vendor": "vtex",
   "name": "my-account-commons",
-  "version": "0.10.2",
+  "version": "1.2.1",
   "title": "MyAccount Commons",
   "defaultLocale": "pt-BR",
   "description": "Shared components used to build ne MyAccounts pages",
   "builders": {
-    "react": "2.x",
-    "messages": "0.x"
+    "react": "3.x",
+    "messages": "1.x"
   },
-  "registries": [
-    "smartcheckout"
-  ],
+  "registries": ["smartcheckout"],
+  "mustUpdateAt": "2019-04-02",
   "scripts": {
     "postreleasy": "vtex publish --verbose"
   },
   "dependencies": {
-    "vtex.styleguide": "8.x"
+    "vtex.styleguide": "9.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
