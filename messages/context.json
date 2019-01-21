@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "alert.connectionError",
+  "alert.unauthenticated": "alert.unauthenticated",
+  "alert.reload": "alert.reload",
+  "alert.unknownError": "alert.unknownError",
+  "commons.back": "commons.back",
+  "progressBar.package.progress": "progressBar.package.progress",
+  "progressBar.order.status": "progressBar.order.status"
+}
