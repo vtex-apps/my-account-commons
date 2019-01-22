@@ -1,13 +1,13 @@
 {
   "vendor": "vtex",
   "name": "my-account-commons",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "title": "MyAccount Commons",
   "defaultLocale": "pt-BR",
   "description": "Shared components used to build ne MyAccounts pages",
   "builders": {
     "react": "2.x",
-    "messages": "0.x"
+    "messages": "1.x"
   },
   "mustUpdateAt": "2019-04-02",
   "categories": [],
