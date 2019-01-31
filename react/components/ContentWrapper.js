@@ -34,7 +34,7 @@ class ContentWrapper extends Component {
     const { shouldShowError } = this.state
 
     return (
-      <section className="vtex-account__page w-100 w-80-m pa6">
+      <section className="vtex-account__page w-100 w-80-m">
         <header>
           <PageHeader
             title={title || intl.formatMessage({ id: titleId })}
@@ -51,13 +51,16 @@ class ContentWrapper extends Component {
             {headerContent}
           </PageHeader>
         </header>
-        <main
-          className={`vtex-account__page-body ${namespace} center w-100 pt6 flex justify-around`}>
+        <main className={`vtex-account__page-body ${namespace} w-100 pa4-s`}>
           {shouldShowError && (
-            <GenericError
-              onDismiss={this.handleDismissError}
-              errorId="alert.unknownError"
-            />
+            <div className="w-100 flex justify-around">
+              <div className="w-50-ns w-80-s">
+                <GenericError
+                  onDismiss={this.handleDismissError}
+                  errorId="alert.unknownError"
+                />
+              </div>
+            </div>
           )}
           {children({ handleError: this.handleError })}
         </main>

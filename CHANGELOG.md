@@ -7,7 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.0] - 2019-01-31
+### Changed
+- `vtex.styleguide` to version 8
+- `ContentWrapper` inside alignment and padding on small screens. 
+
 ## [0.7.0] - 2019-01-22
+### Changed
+- Bumps messages builder major
 
 ## [0.6.0] - 2019-01-07
 ### Added
