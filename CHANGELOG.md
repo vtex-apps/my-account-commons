@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.8.1] - 2019-02-01
+
 ## [0.8.0] - 2019-01-31
 ### Changed
 - `vtex.styleguide` to version 8
