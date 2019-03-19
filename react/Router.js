@@ -5,8 +5,8 @@ import * as ReactRouterDom from 'react-router-dom'
 
   This file's goal is to make the use of react-router-dom
   unified through all the apps within the My Account ecosystem.
-  Delete this if a better solution to the problem of different
-  versions come up.
+  Delete this if a better solution for the problem of
+  having multiple versions of the router comes up.
 */
 
 export default ReactRouterDom
