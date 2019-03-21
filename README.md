@@ -78,3 +78,7 @@ A wrapper for the `vtex.styleguide/Alert` component.
 | `error`     | `String`   | The error message that will be displayed on the `Alert`.             |
 | `errorId`   | `String`   | Intl message id that will be translated and inserted on the `Alert`. |
 | `onDismiss` | `Function` | Function that will be called when the user hits the close button.    |
+
+### Disclaimer about react/Router.js file
+
+Read carefully the instructions within the file before editing it.
