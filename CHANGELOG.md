@@ -7,14 +7,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- `alert.connectionError` update message ca translation.
+
 ## [0.9.1] - 2019-03-21
 
 ### Added
+
 - Router file
 
 ## [0.9.0] - 2019-03-18
 
 ### Added
+
 - Italian translation
 
 ## [0.8.2] - 2019-02-14
@@ -22,38 +28,52 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.8.1] - 2019-02-01
 
 ## [0.8.0] - 2019-01-31
+
 ### Changed
+
 - `vtex.styleguide` to version 8
-- `ContentWrapper` inside alignment and padding on small screens. 
+- `ContentWrapper` inside alignment and padding on small screens.
 
 ## [0.7.0] - 2019-01-22
+
 ### Changed
+
 - Bumps messages builder major
 
 ## [0.6.0] - 2019-01-07
+
 ### Added
+
 - Catalan translation
 
 ## [0.5.0] - 2018-12-28
+
 ### Changed
+
 - Add Messages Builder.
 
 ## [0.4.0] - 2018-12-26
 
 ### Added
+
 - Add `SkeletonBox` and `SkeletonPiece` components.
 
 ## [0.3.2] - 2018-12-07
+
 ### Fixed
+
 - `BaseLoading` display nothing when no error message was identified and is not loading anymore.
 
 ## [0.3.1] - 2018-12-06
+
 ### Fixed
+
 - Fix `PackageProgressBar` exportation.
 
 ## [0.3.0] - 2018-11-30
 
 ### Added
+
 - `util.js` utility functions.
 - `ProgressBar` componentes.
 
