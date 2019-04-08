@@ -1,5 +1,5 @@
 {
-  "alert.connectionError": "Hi va haver un error en connectar amb el sistema, intenti carregar la pàgina novament.",
+  "alert.connectionError": "Hi ha hagut un error al connectar amb el sistema. Intenta tornar a carregar la pàgina de nou.",
   "alert.unauthenticated": "Ha d'estar autenticat per continuar amb aquesta acció",
   "alert.reload": "Recarregar",
   "alert.unknownError": "S'ha produït un error, torni a provar.",
