@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.9.2] - 2019-04-08
+
 ### Fixed
 
 - `alert.connectionError` update message ca translation.
