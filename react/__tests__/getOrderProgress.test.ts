@@ -94,7 +94,7 @@ describe('getOrderProgress', () => {
 
     const progress = getOrderProgress(deliveredOrder.status, packages)
 
-    expect(progress).toEqual(FIFTH_STEP)
+    expect(progress).toEqual(FOURTH_STEP)
   })
 
   it('Should map to the fourth step of the progress bar since all packages were not delivered even though its status is invoiced', () => {
