@@ -7,7 +7,24 @@ import {
 } from './constants'
 import { isDelivered } from './utils'
 
-const statusMap = {
+interface StatusMap {
+  'order-created': number
+  'order-completed': number
+  'on-order-completed': number
+  'payment-pending': number
+  'window-to-cancel': number
+  'approve-payment': number
+  'payment-approved': number
+  'ready-for-handling': number
+  'authorize-fullfilment': number
+  'release-to-fulfillment': number
+  handling: number
+  invoice: number
+  invoiced: number
+  [key: string]: number
+}
+
+const statusMap: StatusMap = {
   'order-created': FIRST_STEP,
   'order-completed': FIRST_STEP,
   'on-order-completed': FIRST_STEP,
@@ -23,7 +40,7 @@ const statusMap = {
   invoiced: FOURTH_STEP,
 }
 
-export default function getOrderProgress(status, packages) {
+export default function getOrderProgress(status: string, packages: any) {
   let progress = statusMap[status]
   if (
     progress === FOURTH_STEP &&
@@ -34,12 +51,12 @@ export default function getOrderProgress(status, packages) {
   return progress
 }
 
-function isCarrierHandling(packages) {
+function isCarrierHandling(packages: any) {
   let isCarrierHandling = true
   if (packages.length === 0) {
     isCarrierHandling = false
   }
-  packages.map(pack => {
+  packages.map((pack: any) => {
     if (
       !pack.package ||
       !pack.package.courierStatus ||

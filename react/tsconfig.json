@@ -3,7 +3,7 @@
     "alwaysStrict": true,
     "esModuleInterop": true,
     "jsx": "react",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2017", "dom", "es2018.promise"],
     "module": "es6",
     "moduleResolution": "node",
     "noEmitOnError": true,
@@ -22,7 +22,7 @@
     "types": ["node", "jest", "graphql"]
   },
   "exclude": ["node_modules"],
-  "include": ["./typings/*.d.ts", "./**/*.tsx"],
+  "include": ["./typings/*.d.ts", "./**/*.tsx", "./**/*.ts"],
   "typeAcquisition": {
     "enable": false
   }

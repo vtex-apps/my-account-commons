@@ -1,5 +1,5 @@
-export default function transformStates(states) {
-  const newStates = states.reduce((acc, state, index) => {
+export default function transformStates(states: any) {
+  const newStates = states.reduce((acc: any, state: any, index: number) => {
     return index === states.length - 1
       ? acc.concat({ ...state, originalIndex: index })
       : acc.concat(

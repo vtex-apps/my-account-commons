@@ -1,7 +1,11 @@
 import { FIRST_STEP, SECOND_STEP, THIRD_STEP } from '../constants'
 import getOrderProgress from '../getOrderProgress'
 
-export default function getPackageProgress(pack, orderStatus, orderPackages) {
+export default function getPackageProgress(
+  pack: any,
+  orderStatus: any,
+  orderPackages: any
+) {
   if (
     getOrderProgress(orderStatus, orderPackages) < THIRD_STEP ||
     orderPackages.length < 2 ||

@@ -2,11 +2,11 @@ import {
   FIRST_STEP,
   SECOND_STEP,
   THIRD_STEP,
-} from '../components/OrderProgressBar/constants'
+} from '../components/ProgressBar/constants'
 
-import getPackageProgress from '../components/OrderProgressBar/PackageProgressBar/getPackageProgress'
-import deliveredOrder from '../__mocks__/DeliveredOrder'
-import notDeliveredOrder from '../__mocks__/NotDeliveredOrder'
+import getPackageProgress from '../components/ProgressBar/PackageProgressBar/getPackageProgress'
+import deliveredOrder from '../mocks/DeliveredOrder'
+import notDeliveredOrder from '../mocks/NotDeliveredOrder'
 
 describe('getPackageProgress', () => {
   it('Should return null when the order has less than 2 packages', () => {
