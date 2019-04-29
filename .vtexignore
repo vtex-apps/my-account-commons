@@ -1,10 +1,10 @@
-.git/
-react/node_modules/
+node_modules/
+.editorconfig
 .eslintrc
 .gitignore
-package.json
 README.md
-CHANGELOG.md
 react/**/__tests__/**
 react/**/__mocks__/**
-react/setupTests.js
+react/**/*.test.tsx
+react/testUtils/**/*
+react/.babelrc

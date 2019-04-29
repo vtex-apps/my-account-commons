@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { FunctionComponent } from 'react'
+
 import SkeletonPiece from './SkeletonPiece'
 
-const SkeletonBox = ({
+const SkeletonBox: FunctionComponent<Props> = ({
   children,
   maxWidthStep,
   shouldAllowGrowing,
@@ -10,13 +10,14 @@ const SkeletonBox = ({
 }) => {
   const widthClass = maxWidthStep ? `mw${maxWidthStep}-ns` : ''
   const flexClass = shouldAllowGrowing ? 'flex-auto' : 'flex-none'
+
   return (
     <div className={`pb5 pr5-ns ${flexClass} ${widthClass}`}>
       <article className="ba bw1 b--muted-5 br2 h-100 flex flex-column justify-between">
         <main className="ph7 pv6">{children}</main>
         {shouldShowLowerButton && (
           <footer className="flex justify-end ph7 pb6 pt3">
-            <SkeletonPiece width={50} />
+            <SkeletonPiece width="50" size="4" />
           </footer>
         )}
       </article>
@@ -28,11 +29,10 @@ SkeletonBox.defaultProps = {
   shouldAllowGrowing: false,
 }
 
-SkeletonBox.propTypes = {
-  children: PropTypes.any.isRequired,
-  maxWidthStep: PropTypes.number,
-  shouldAllowGrowing: PropTypes.bool,
-  shouldShowLowerButton: PropTypes.bool,
+interface Props {
+  maxWidthStep?: number
+  shouldAllowGrowing?: boolean
+  shouldShowLowerButton?: boolean
 }
 
 export default SkeletonBox

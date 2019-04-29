@@ -1,7 +1,9 @@
 {
-  "name": "vtex.my-account-commons",
   "scripts": {
-    "test": "vtex-scripts test"
+    "lint": "tsc --noEmit",
+    "lint:locales": "intl-equalizer",
+    "test": "vtex-test-tools test",
+    "test:watch": "vtex-test-tools test:watch"
   },
   "dependencies": {
     "lodash": "^4.17.11",
@@ -11,10 +13,20 @@
     "react-router-prop-types": "^1.0.4"
   },
   "devDependencies": {
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1"
-  },
-  "vtexScriptsOverride": {
-    "srcPath": "."
+    "@types/graphql": "^14.0.7",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.11.3",
+    "@types/react": "^16.8.8",
+    "@types/react-dates": "^17.1.5",
+    "@types/react-intl": "^2.3.17",
+    "@types/react-outside-click-handler": "^1.2.0",
+    "@types/recompose": "^0.30.5",
+    "@vtex/delivery-packages": "^2.17.0",
+    "@vtex/test-tools": "^0.1.4",
+    "apollo-client": "^2.5.1",
+    "eslint": "^5.16.0",
+    "eslint-config-vtex-react": "^4.0.0",
+    "prettier": "^1.17.0",
+    "typescript": "^3.4.5"
   }
 }

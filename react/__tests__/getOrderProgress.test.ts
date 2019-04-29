@@ -1,15 +1,15 @@
 import packagify from '@vtex/delivery-packages'
 
-import getOrderProgress from '../getOrderProgress'
+import getOrderProgress from '../components/ProgressBar/getOrderProgress'
 import {
   FIRST_STEP,
   SECOND_STEP,
   THIRD_STEP,
   FOURTH_STEP,
   FIFTH_STEP,
-} from '..//constants'
-import deliveredOrder from '../__mocks__/DeliveredOrder'
-import notDeliveredOrder from '../__mocks__/NotDeliveredOrder'
+} from '../components/ProgressBar/constants'
+import deliveredOrder from '../mocks/NotDeliveredOrder'
+import notDeliveredOrder from '../mocks/NotDeliveredOrder'
 
 describe('getOrderProgress', () => {
   it('Should return undefined when status is not mapped', () => {
@@ -94,7 +94,7 @@ describe('getOrderProgress', () => {
 
     const progress = getOrderProgress(deliveredOrder.status, packages)
 
-    expect(progress).toEqual(FIFTH_STEP)
+    expect(progress).toEqual(FOURTH_STEP)
   })
 
   it('Should map to the fourth step of the progress bar since all packages were not delivered even though its status is invoiced', () => {

@@ -1,4 +1,5 @@
-import transformStates from '../transformStates'
+import transformStates from '../components/ProgressBar/transformStates'
+
 describe('transformStates', () => {
   it('Should return the right states when the number of input states is even', () => {
     const states = [
