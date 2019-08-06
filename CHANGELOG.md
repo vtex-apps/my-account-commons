@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Last order status never rendering **ConcludedCircle**.
+
+### Added
+
+- Handle for pickup delivery channel in **ProgressBar**.
+
 ## [0.10.0] - 2019-04-29
 
 ### Changed

@@ -31,6 +31,7 @@ export const progressBarStates = [
     todo: 'order.progress.ship',
     done: 'order.progress.shipped',
     doing: 'order.progress.shipping',
+    doing_pickup: 'order.state.ready-for-pickup',
   },
 ]
 
