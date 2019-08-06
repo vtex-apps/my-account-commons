@@ -13,12 +13,6 @@ export function generateProgressBarStates(
       isDelivered(packages)
     ) {
       label = state.done
-    } else if (
-      index === FIFTH_STEP &&
-      currentState === FIFTH_STEP &&
-      isOrderReadyToPickUp(packages)
-    ) {
-      label = state.doing_pickup
     } else if (currentState === index) {
       label = state.doing
     } else if (currentState > index) {
@@ -77,10 +71,4 @@ export function generatePackageProgressBarStates(
       label: label,
     }
   })
-}
-
-export function isOrderReadyToPickUp(packages: any) {
-  if (packages == null || packages.length === 0) return false
-
-  return packages.every((pkg: any) => pkg.deliveryChannel === 'pickup-in-point')
 }

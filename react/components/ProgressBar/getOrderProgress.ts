@@ -5,7 +5,7 @@ import {
   FOURTH_STEP,
   FIFTH_STEP,
 } from './constants'
-import { isDelivered, isOrderReadyToPickUp } from './utils'
+import { isDelivered } from './utils'
 
 interface StatusMap {
   'order-created': number
@@ -44,9 +44,7 @@ export default function getOrderProgress(status: string, packages: any) {
   let progress = statusMap[status]
   if (
     progress === FOURTH_STEP &&
-    (isDelivered(packages) ||
-      isCarrierHandling(packages) ||
-      isOrderReadyToPickUp(packages))
+    (isDelivered(packages) || isCarrierHandling(packages))
   ) {
     progress = FIFTH_STEP
   }
