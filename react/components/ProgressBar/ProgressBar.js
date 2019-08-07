@@ -8,10 +8,11 @@ import ConcludedCircle from './ConcludedCircle'
 import UnconcludedCircle from './UnconcludedCircle'
 import Caption from './Caption'
 import transformStates from './transformStates'
+import { FIFTH_STEP } from './constants'
 
 class ProgressBar extends Component {
   render() {
-    const { states, currentState } = this.props
+    const { states, currentState, hasFinished } = this.props
     if (!currentState) return null
     const progressStates = transformStates(states)
     return (
@@ -32,10 +33,14 @@ class ProgressBar extends Component {
                 <UnconcludedLine key={index} />
               )
             }
-            if (currentState === state.originalIndex) {
-              return <CurrentCircle key={index} label={state.label} />
-            } else if (currentState > state.originalIndex) {
+
+            if (
+              currentState > state.originalIndex ||
+              (hasFinished && currentState === FIFTH_STEP)
+            ) {
               return <ConcludedCircle key={index} label={state.label} />
+            } else if (currentState === state.originalIndex) {
+              return <CurrentCircle key={index} label={state.label} />
             }
             return <UnconcludedCircle key={index} label={state.label} />
           })}
@@ -48,6 +53,7 @@ class ProgressBar extends Component {
 ProgressBar.propTypes = {
   currentState: PropTypes.number.isRequired,
   states: PropTypes.array.isRequired,
+  hasFinished: PropTypes.bool,
 }
 
 export default ProgressBar
