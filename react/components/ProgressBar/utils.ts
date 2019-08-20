@@ -82,5 +82,11 @@ export function generatePackageProgressBarStates(
 export function isOrderReadyToPickUp(packages: any) {
   if (packages == null || packages.length === 0) return false
 
-  return packages.every((pkg: any) => pkg.deliveryChannel === 'pickup-in-point')
+  return packages.every((item: any) => {
+    const isPickUp = item.deliveryChannel === 'pickup-in-point'
+    const isReadyToPickUp =
+      !item.shippingEstimateDate ||
+      Date.now() >= new Date(item.shippingEstimateDate).getTime()
+    return isPickUp && isReadyToPickUp
+  })
 }
