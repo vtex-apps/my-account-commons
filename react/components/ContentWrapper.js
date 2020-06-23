@@ -30,24 +30,26 @@ class ContentWrapper extends Component {
       history,
       headerContent,
       namespace,
+      hideBackButton = false,
     } = this.props
     const { shouldShowError } = this.state
+
+    const backButtonConfigs = {
+      linkLabel: backButton
+        ? backButton.title
+          ? backButton.title
+          : intl.formatMessage({ id: backButton.titleId })
+        : intl.formatMessage({ id: 'commons.back' }),
+      onLinkClick: () => history.push(backButton ? backButton.path : '/'),
+    }
 
     return (
       <section className="vtex-account__page w-100 w-80-m">
         <header>
           <PageHeader
             title={title || intl.formatMessage({ id: titleId })}
-            linkLabel={
-              backButton
-                ? backButton.title
-                  ? backButton.title
-                  : intl.formatMessage({ id: backButton.titleId })
-                : intl.formatMessage({ id: 'commons.back' })
-            }
-            onLinkClick={() =>
-              history.push(backButton ? backButton.path : '/')
-            }>
+            {...(!hideBackButton && backButtonConfigs)}
+          >
             {headerContent}
           </PageHeader>
         </header>
@@ -81,6 +83,7 @@ ContentWrapper.propTypes = {
     path: PropTypes.string.isRequired,
   }),
   history: ReactRouterPropTypes.history.isRequired,
+  hideBackButton: PropTypes.bool,
   headerContent: PropTypes.node,
 }
 

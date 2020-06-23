@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- `hideBackButton` prop to ContentWrapper.
+
 ## [0.11.1] - 2020-06-15
 
 ### Fixed
