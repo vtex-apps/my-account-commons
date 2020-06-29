@@ -5,7 +5,7 @@ import {
   FOURTH_STEP,
   FIFTH_STEP,
 } from './constants'
-import { isDelivered, isOrderReadyToPickUp } from './utils'
+import { isDelivered, isOrderPickUp, isOrderReadyToPickUp } from './utils'
 
 interface StatusMap {
   'order-created': number
@@ -40,34 +40,26 @@ const statusMap: StatusMap = {
   invoiced: FOURTH_STEP,
 }
 
-export default function getOrderProgress(status: string, packages: any) {
-  let progress = statusMap[status]
-  if (
-    progress === FOURTH_STEP &&
-    (isDelivered(packages) ||
-      isCarrierHandling(packages) ||
-      isOrderReadyToPickUp(packages))
-  ) {
-    progress = FIFTH_STEP
-  }
-  return progress
+function isCarrierHandling(packages: any) {
+  if (packages == null || packages.length === 0) return false
+
+  return packages.every(
+    (pck: any) => pck.package?.courierStatus?.data?.length > 0
+  )
 }
 
-function isCarrierHandling(packages: any) {
-  let isCarrierHandling = true
-  if (packages.length === 0) {
-    isCarrierHandling = false
-  }
-  packages.map((pack: any) => {
-    if (
-      !pack.package ||
-      !pack.package.courierStatus ||
-      (pack.package.courierStatus.data &&
-        pack.package.courierStatus.data.length === 0)
+export default function getOrderProgress(status: string, packages: any) {
+  let progress = statusMap[status]
+  if (progress === FOURTH_STEP) {
+    const isPickup = isOrderPickUp(packages)
+    if (isPickup && !isOrderReadyToPickUp(packages) && !isDelivered(packages)) {
+      progress = THIRD_STEP
+    } else if (
+      !isPickup &&
+      (isDelivered(packages) || isCarrierHandling(packages))
     ) {
-      isCarrierHandling = false
-      return
+      progress = FIFTH_STEP
     }
-  })
-  return isCarrierHandling
+  }
+  return progress
 }

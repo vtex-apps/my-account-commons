@@ -26,12 +26,14 @@ export const progressBarStates = [
     todo: 'order.progress.deliverToCarrier',
     done: 'order.progress.delivered',
     doing: 'order.progress.delivering',
+    todo_pickup: 'order.progress.pickup',
+    done_pickup: 'order.state.pickedUp',
+    doing_pickup: 'order.state.ready-for-pickup',
   },
   {
     todo: 'order.progress.ship',
     done: 'order.progress.shipped',
     doing: 'order.progress.shipping',
-    doing_pickup: 'order.state.ready-for-pickup',
   },
 ]
 
