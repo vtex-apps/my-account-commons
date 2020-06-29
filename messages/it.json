@@ -1,9 +1,9 @@
 {
-  "alert.connectionError": "Si è verificato un errore di comunicazione con il sistema, prova a ricaricare la pagina.",
-  "alert.unauthenticated": "È necessario identificarsi per eseguire questa azione.",
+  "alert.connectionError": "Si è verificato un errore collegandosi al sistema, prova a ricaricare la pagina.",
+  "alert.unauthenticated": "Devi essere autorizzato per procedere con quest'azione.",
   "alert.reload": "Ricarica",
   "alert.unknownError": "Si è verificato un errore, riprova.",
-  "commons.back": "Torna alla pagina precedente",
-  "progressBar.package.progress": "Stato del pacco",
-  "progressBar.order.status": "Stato dell'ordine"
+  "commons.back": "Ritorna",
+  "progressBar.package.progress": "Status del pacco",
+  "progressBar.order.status": "Status dell'ordine"
 }
