@@ -1,4 +1,4 @@
-import { FIFTH_STEP, THIRD_STEP, FOURTH_STEP } from './constants'
+import { FIFTH_STEP, THIRD_STEP } from './constants'
 
 export function generateProgressBarStates(
   progressBarStates: any[],
@@ -8,18 +8,15 @@ export function generateProgressBarStates(
   const wasDelivered = isDelivered(packages)
   const isPickup = isOrderPickUp(packages)
 
-  const states = progressBarStates.map((state, index) => {
-    let label = state.todo
+  return progressBarStates.map((_state, index) => {
+    let label
+    const state = _state.pickup
+      ? isPickup
+        ? _state.pickup
+        : _state.shipping
+      : _state
 
-    if (isPickup && index == FOURTH_STEP) {
-      if (index > currentState) {
-        label = state.todo_pickup
-      } else if (wasDelivered) {
-        label = state.done_pickup
-      } else {
-        label = state.doing_pickup
-      }
-    } else if (index < currentState) {
+    if (index < currentState) {
       label = state.done
     } else if (index == currentState) {
       if (index == FIFTH_STEP && wasDelivered) {
@@ -27,6 +24,8 @@ export function generateProgressBarStates(
       } else {
         label = state.doing
       }
+    } else {
+      label = state.todo
     }
 
     return {
@@ -34,8 +33,6 @@ export function generateProgressBarStates(
       label: label,
     }
   })
-
-  return isPickup ? states.splice(0, 4) : states
 }
 
 export function isDelivered(packages: any) {
