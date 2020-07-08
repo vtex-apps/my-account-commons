@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "my-account-commons",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "title": "MyAccount Commons",
   "defaultLocale": "pt-BR",
   "description": "Shared components used to build ne MyAccounts pages",
