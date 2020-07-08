@@ -3,7 +3,7 @@
   "alert.unauthenticated": "Devi essere autorizzato per procedere con quest'azione.",
   "alert.reload": "Ricarica",
   "alert.unknownError": "Si è verificato un errore, riprova.",
-  "commons.back": "Ritorna",
+  "commons.back": "Indietro",
   "progressBar.package.progress": "Status del pacco",
   "progressBar.order.status": "Status dell'ordine"
 }
