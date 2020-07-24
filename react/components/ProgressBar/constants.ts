@@ -23,15 +23,28 @@ export const progressBarStates = [
     doing: 'order.progress.handlingShipping',
   },
   {
-    todo: 'order.progress.deliverToCarrier',
-    done: 'order.progress.delivered',
-    doing: 'order.progress.delivering',
+    shipping: {
+      todo: 'order.progress.deliverToCarrier',
+      done: 'order.progress.delivered',
+      doing: 'order.progress.delivering',
+    },
+    pickup: {
+      todo: 'order.progress.deliverToPickup',
+      done: 'order.progress.deliveredToPickup',
+      doing: 'order.progress.deliveringToPickup',
+    },
   },
   {
-    todo: 'order.progress.ship',
-    done: 'order.progress.shipped',
-    doing: 'order.progress.shipping',
-    doing_pickup: 'order.state.ready-for-pickup',
+    shipping: {
+      todo: 'order.progress.ship',
+      done: 'order.progress.shipped',
+      doing: 'order.progress.shipping',
+    },
+    pickup: {
+      todo: 'order.progress.pickup',
+      done: 'order.state.pickedUp',
+      doing: 'order.state.ready-for-pickup',
+    },
   },
 ]
 
