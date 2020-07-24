@@ -18,8 +18,8 @@ export function generateProgressBarStates(
 
     if (index < currentState) {
       label = state.done
-    } else if (index == currentState) {
-      if (index == FIFTH_STEP && wasDelivered) {
+    } else if (index === currentState) {
+      if (index === FIFTH_STEP && wasDelivered) {
         label = state.done
       } else {
         label = state.doing
