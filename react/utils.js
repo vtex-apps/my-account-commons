@@ -49,7 +49,7 @@ function reduceBundleItems(items) {
 
       if (item.bundleItems && item.bundleItems.length > 0) {
         acc = acc.concat(
-          item.bundleItems.map(bundleItem =>
+          item.bundleItems.map((bundleItem) =>
             addBundleItemFlagAndParentItemQuantity(item, bundleItem)
           )
         )
