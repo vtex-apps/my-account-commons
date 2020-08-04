@@ -46,12 +46,22 @@ class ContentWrapper extends Component {
     return (
       <section className="vtex-account__page w-100 w-80-m">
         <header>
-          <PageHeader
-            title={title || intl.formatMessage({ id: titleId })}
-            {...(!hideBackButton && backButtonConfigs)}
-          >
-            {headerContent}
-          </PageHeader>
+          <div className="db dn-m">
+            <PageHeader
+              title={title || intl.formatMessage({ id: titleId })}
+              {...backButtonConfigs}
+            >
+              {headerContent}
+            </PageHeader>
+          </div>
+          <div className="db-m dn">
+            <PageHeader
+              title={title || intl.formatMessage({ id: titleId })}
+              {...(!hideBackButton && backButtonConfigs)}
+            >
+              {headerContent}
+            </PageHeader>
+          </div>
         </header>
         <main className={`vtex-account__page-body ${namespace} w-100 pa4-s`}>
           {shouldShowError && (
@@ -87,4 +97,4 @@ ContentWrapper.propTypes = {
   headerContent: PropTypes.node,
 }
 
-export default withRouter(injectIntl(ContentWrapper))
+export default injectIntl(withRouter(ContentWrapper))
