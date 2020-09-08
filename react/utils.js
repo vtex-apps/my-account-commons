@@ -8,36 +8,51 @@ function estimateShipping(deliveryPackage) {
     shippingEstimateDate: slaShippingEstimateDate,
   } = deliveryPackage
 
-  let shippingEstimate
-  if (slaShippingEstimateDate) {
-    const isEstimateInHoursOrMinutes =
-      slaShippingEstimate.match(/\d+|[a-zA-Z]+/g)[1].indexOf('h') !== -1 ||
-      slaShippingEstimate.match(/\d+|[a-zA-Z]+/g)[1].indexOf('m') !== -1
+  if (!slaShippingEstimate) {
+    return slaShippingEstimateDate != null
+      ? {
+          date: slaShippingEstimateDate,
+        }
+      : null
+  }
 
-    shippingEstimate = {
+  const shippingEstimateParts = slaShippingEstimate.match(/\d+|[a-zA-Z]+/g)
+
+  // There's a bug in the API that makes shippingEstimate not have a unit.
+  // This is the case this if is fixing
+  if (!shippingEstimateParts || shippingEstimateParts.length <= 1) {
+    return {
       date: slaShippingEstimateDate,
-      isEstimateInHoursOrMinutes: isEstimateInHoursOrMinutes,
-    }
-  } else if (slaShippingEstimate) {
-    const shippingEstimateParts = slaShippingEstimate.match(/\d+|[a-zA-Z]+/g)
-
-    const number = parseInt(shippingEstimateParts[0])
-    const type = shippingEstimateParts[1]
-
-    const label = (
-      <FormattedMessage
-        id={`order.shippingEstimate.${type}`}
-        values={{ timeAmount: number }}
-      />
-    )
-
-    shippingEstimate = {
-      unit: number,
-      type: type,
-      label: label,
     }
   }
-  return shippingEstimate
+
+  const estimateValue = shippingEstimateParts[0]
+  const estimateType = shippingEstimateParts[1]
+
+  if (slaShippingEstimateDate) {
+    const isEstimateInHoursOrMinutes =
+      estimateType.indexOf('h') !== -1 || estimateType.indexOf('m') !== -1
+
+    return {
+      date: slaShippingEstimateDate,
+      isEstimateInHoursOrMinutes,
+    }
+  }
+
+  const estimateValueInt = parseInt(estimateValue)
+
+  const label = (
+    <FormattedMessage
+      id={`order.shippingEstimate.${estimateType}`}
+      values={{ timeAmount: estimateValueInt }}
+    />
+  )
+
+  return {
+    unit: estimateValueInt,
+    type: estimateType,
+    label: label,
+  }
 }
 
 function reduceBundleItems(items) {
