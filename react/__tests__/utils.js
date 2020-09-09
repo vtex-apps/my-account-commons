@@ -9,6 +9,7 @@ describe('estimateShipping', () => {
     }
 
     const response = utils.estimateShipping(mockDeliveryPackage)
+
     expect(response.date).toBe(currentDate)
     expect(response.isEstimateInHoursOrMinutes).toBe(false)
   })
@@ -21,6 +22,7 @@ describe('estimateShipping', () => {
     }
 
     const response = utils.estimateShipping(mockDeliveryPackage)
+
     expect(response.date).toBe(currentDate)
     expect(response.isEstimateInHoursOrMinutes).toBe(true)
   })
@@ -34,6 +36,7 @@ describe('estimateShipping', () => {
     }
 
     const response = utils.estimateShipping(mockDeliveryPackage)
+
     expect(response.unit).toBe(parseInt(value))
     expect(response.type).toBe(type)
     expect(response.label).not.toBeNull()
@@ -46,6 +49,7 @@ describe('estimateShipping', () => {
     }
 
     const response = utils.estimateShipping(mockDeliveryPackage)
+
     expect(response.date).toBe(currentDate)
   })
 
@@ -53,6 +57,7 @@ describe('estimateShipping', () => {
     const mockedDeliveryPackage = {}
 
     const response = utils.estimateShipping(mockedDeliveryPackage)
+
     expect(response).toBeNull()
   })
 
