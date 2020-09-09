@@ -18,7 +18,7 @@ function estimateShipping(deliveryPackage) {
 
   const shippingEstimateParts = slaShippingEstimate.match(/\d+|[a-zA-Z]+/g)
 
-  // There's a bug in the API that makes shippingEstimate not have a unit.
+  // There's a bug in the API that makes shippingEstimate not to have a unit.
   // This is the case this if is fixing
   if (!shippingEstimateParts || shippingEstimateParts.length <= 1) {
     return {
