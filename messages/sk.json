@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "Pri pripájaní k systému sa vyskytla chyba, skúste stránku načítať znova.",
+  "alert.unauthenticated": "Aby ste mohli pokračovať v tejto akcii, musíte byť overení.",
+  "alert.reload": "Znova načítať",
+  "alert.unknownError": "Vyskytla sa chyba, skúste to znova.",
+  "commons.back": "Vrátiť sa",
+  "progressBar.package.progress": "Stav balíka",
+  "progressBar.order.status": "Stav objednávky"
+}

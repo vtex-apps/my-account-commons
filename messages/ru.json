@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "Возникала ошибка соединения с системой, попробуйте перезагрузить страницу.",
+  "alert.unauthenticated": "Вы должны авторизоваться, чтобы продолжить это действие.",
+  "alert.reload": "Перезагрузить",
+  "alert.unknownError": "Возникла ошибка, попробуйте снова.",
+  "commons.back": "Вернуться",
+  "progressBar.package.progress": "Статус отправления",
+  "progressBar.order.status": "Статус заказа"
+}

@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "Помилка підключення до системи, спробуйте перезавантажити сторінку.",
+  "alert.unauthenticated": "Щоб виконати цю дію, вам потрібно пройти автентифікацію.",
+  "alert.reload": "Перезавантаження",
+  "alert.unknownError": "Сталася помилка, спробуйте знову.",
+  "commons.back": "Повернутися",
+  "progressBar.package.progress": "Статус посилки",
+  "progressBar.order.status": "Статус замовлення"
+}

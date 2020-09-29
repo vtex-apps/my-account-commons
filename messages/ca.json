@@ -1,9 +1,9 @@
 {
-  "alert.connectionError": "Hi ha hagut un error al connectar amb el sistema. Intenta tornar a carregar la pàgina de nou.",
-  "alert.unauthenticated": "Ha d'estar autenticat per continuar amb aquesta acció",
-  "alert.reload": "Recarregar",
-  "alert.unknownError": "S'ha produït un error, torni a provar.",
-  "commons.back": "Tornar",
-  "progressBar.package.progress": "Estat de la comanda",
-  "progressBar.order.status": "Estat del paquet"
+  "alert.connectionError": "S'ha produït un error en connectar amb el sistema. Proveu de recarregar la pàgina.",
+  "alert.unauthenticated": "Se us ha d'autenticar per poder continuar amb aquesta acció.",
+  "alert.reload": "Recarrega",
+  "alert.unknownError": "S'ha produït un error. Torneu-ho a provar.",
+  "commons.back": "Torna",
+  "progressBar.package.progress": "Estat del paquet",
+  "progressBar.order.status": "Estat de la comanda"
 }

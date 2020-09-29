@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "Det uppstod ett fel vid anslutningen till systemet, försök att ladda om sidan igen.",
+  "alert.unauthenticated": "Du måste verifieras för att fortsätta med den här åtgärden.",
+  "alert.reload": "Ladda om",
+  "alert.unknownError": "Ett fel uppstod, försök igen.",
+  "commons.back": "Återgå",
+  "progressBar.package.progress": "Förpackningsstatus",
+  "progressBar.order.status": "Beställningsstatus"
+}

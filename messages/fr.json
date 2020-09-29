@@ -1,9 +1,9 @@
 {
-  "alert.connectionError": "Une erreur s'est produite lors de la connexion au système, essayez de recharger la page.",
+  "alert.connectionError": "Une erreur de connexion au système s'est produite. Veuillez essayer de recharger la page.",
   "alert.unauthenticated": "Vous devez être authentifié pour poursuivre cette action.",
   "alert.reload": "Recharger",
-  "alert.unknownError": "Une erreur est survenue, réessayez.",
+  "alert.unknownError": "Une erreur est survenue, veuillez réessayer.",
   "commons.back": "Retour",
-  "progressBar.package.progress": "Status du paquet",
-  "progressBar.order.status": "Status de la commande"
+  "progressBar.package.progress": "Statut du colis",
+  "progressBar.order.status": "Statut de la commande"
 }

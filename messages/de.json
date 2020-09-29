@@ -1,9 +1,9 @@
 {
-  "alert.connectionError": "Es gab einen Fehler beim Verbinden mit dem System. Versuchen Sie, die Seite neu zu laden.",
-  "alert.unauthenticated": "Sie müssen authentifiziert sein, um mit dieser Aktion fortfahren zu können.",
+  "alert.connectionError": "Es gab einen Fehler beim Verbindungsaufbau mit dem System, versuchen Sie, die Seite neu zu laden.",
+  "alert.unauthenticated": "Sie müssen authentifiziert werden, um mit dieser Aktion fortzufahren.",
   "alert.reload": "Neu laden",
-  "alert.unknownError": "Ein Fehler ist aufgetreten, versuchen Sie es nochmal.",
-  "commons.back": "Zurück",
-  "progressBar.package.progress": "Paket Status",
+  "alert.unknownError": "Es ist ein Fehler aufgetreten, versuchen Sie es erneut.",
+  "commons.back": "Return",
+  "progressBar.package.progress": "Status des Pakets",
   "progressBar.order.status": "Bestellstatus"
 }

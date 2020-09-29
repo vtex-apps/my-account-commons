@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "Der opstod en fejl under forbindelse med systemet, prøv at indlæse siden igen.",
+  "alert.unauthenticated": "Du skal godkendes for at fortsætte med denne handling.",
+  "alert.reload": "Genindlæs",
+  "alert.unknownError": "Der opstod en fejl, prøv igen.",
+  "commons.back": "Gå tilbage",
+  "progressBar.package.progress": "Pakkestatus",
+  "progressBar.order.status": "Ordrestatus"
+}

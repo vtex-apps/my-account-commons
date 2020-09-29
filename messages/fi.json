@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "Virhe muodostettaessa yhteyttä järjestelmään. Kokeile ladata sivu uudelleen.",
+  "alert.unauthenticated": "Sinut täytyy todentaa, jotta voit suorittaa tämän toiminnon.",
+  "alert.reload": "Lataa uudelleen",
+  "alert.unknownError": "Tapahtui virhe, yritä uudelleen.",
+  "commons.back": "Palaa",
+  "progressBar.package.progress": "Paketin tila",
+  "progressBar.order.status": "Tilauksen tila"
+}
