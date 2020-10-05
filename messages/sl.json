@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "Pojavila se je napaka pri povezavi s sistmeom, poskusite ponovno naložiti stran.",
+  "alert.unauthenticated": "Mora biti preverjeni, da lahko nadaljujete s tem dejanjem.",
+  "alert.reload": "Ponovno nalaganje",
+  "alert.unknownError": "Pojavila se je napaka, poskusite znova.",
+  "commons.back": "Vrnitev",
+  "progressBar.package.progress": "Stanje paketa",
+  "progressBar.order.status": "Stanje naročila"
+}

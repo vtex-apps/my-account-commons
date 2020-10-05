@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "시스템에 연결하는 동안 오류가 발생했습니다. 페이지를 다시 로딩하십시오.",
+  "alert.unauthenticated": "이 작업을 수행하려면 인증을 받아야 합니다.",
+  "alert.reload": "다시 로딩",
+  "alert.unknownError": "오류가 발생했습니다. 다시 시도하십시오.",
+  "commons.back": "반품",
+  "progressBar.package.progress": "패키지 상태",
+  "progressBar.order.status": "주문 상태"
+}

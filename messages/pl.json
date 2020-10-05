@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "Wystąpił błąd podczas łączenia z systemem, spróbuj przeładować stronę.",
+  "alert.unauthenticated": "Musisz być uwierzytelniony, aby kontynuować to działanie.",
+  "alert.reload": "Przeładuj",
+  "alert.unknownError": "Wystąpił błąd, spróbuj ponownie.",
+  "commons.back": "Powrót",
+  "progressBar.package.progress": "Status paczki",
+  "progressBar.order.status": "Status zamówienia"
+}

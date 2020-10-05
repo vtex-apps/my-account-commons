@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "Възникна грешка при свързване със системата, опитайте да презаредите страницата.",
+  "alert.unauthenticated": "Трябва да се удостоверите, за да продължите с това действие.",
+  "alert.reload": "Презареждане",
+  "alert.unknownError": "Възникна грешка, опитайте отново.",
+  "commons.back": "Връщане",
+  "progressBar.package.progress": "Статус на пакета",
+  "progressBar.order.status": "Статус на поръчката"
+}

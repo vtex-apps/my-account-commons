@@ -1,0 +1,9 @@
+{
+  "alert.connectionError": "Er was een fout in de verbinding met het systeem, probeer de pagina opnieuw te laden.",
+  "alert.unauthenticated": "U moet worden geverifieerd om door te gaan met deze actie.",
+  "alert.reload": "Herladen",
+  "alert.unknownError": "Er is een fout opgetreden. Probeer het nog eens.",
+  "commons.back": "Keer terug",
+  "progressBar.package.progress": "Pakketstatus",
+  "progressBar.order.status": "Bestelstatus"
+}

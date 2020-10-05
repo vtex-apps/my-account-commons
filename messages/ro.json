@@ -1,9 +1,9 @@
 {
-  "alert.connectionError": "A apărut o eroare la conectarea la sistem, încercați să reîncărcați pagina.",
-  "alert.unauthenticated": "Trebuie să fiți autentificat pentru a continua această acțiune.",
+  "alert.connectionError": "A apărut o eroare la conectarea cu sistemul, încearcă să reîncarci pagina.",
+  "alert.unauthenticated": "Trebuie să fii autentificat pentru a realiza această acțiune.",
   "alert.reload": "Reîncarcă",
-  "alert.unknownError": "A apărut o eroare, încercați din nou.",
-  "commons.back": "Întoarcere",
-  "progressBar.package.progress": "Starea pachetului",
-  "progressBar.order.status": "Status Comandă"
+  "alert.unknownError": "A apărut o eroare, încearcă din nou.",
+  "commons.back": "Întoarce-te",
+  "progressBar.package.progress": "Statusul pachetului",
+  "progressBar.order.status": "Status comandă"
 }
