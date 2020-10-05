@@ -27,5 +27,5 @@
     "apollo-client": "^2.5.1",
     "typescript": "3.8.3"
   },
-  "version": "0.13.2"
+  "version": "0.14.0"
 }
