@@ -1,4 +1,5 @@
-import { FIFTH_STEP, THIRD_STEP } from './constants'
+import { FIFTH_STEP, progressBarStates, THIRD_STEP } from './constants'
+import getOrderProgress from './getOrderProgress'
 
 export function generateProgressBarStates(
   progressBarStates: any[],
@@ -35,11 +36,20 @@ export function generateProgressBarStates(
   })
 }
 
+export function getCurrentProgressBarState(status: string, packages: any) {
+  const currentProgressIndex = getOrderProgress(status, packages)
+
+  const generatedProgressBarStates = generateProgressBarStates(progressBarStates, currentProgressIndex, packages)
+
+  return generatedProgressBarStates[currentProgressIndex]?.label
+}
+
 export function isDelivered(packages: any) {
-  let isDelivered = true
-  if (packages.length === 0) {
-    isDelivered = false
+  if (packages == null || packages.length === 0) {
+    return false
   }
+
+  let isDelivered = true
   packages.map((pack: any) => {
     if (
       !pack.package ||
@@ -50,6 +60,7 @@ export function isDelivered(packages: any) {
       return
     }
   })
+
   return isDelivered
 }
 
