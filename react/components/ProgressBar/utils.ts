@@ -39,7 +39,9 @@ export function generateProgressBarStates(
 export function getCurrentProgressBarState(status: string, packages: any) {
   const currentProgressIndex = getOrderProgress(status, packages)
 
-  return generateProgressBarStates(progressBarStates, currentProgressIndex, packages)[currentProgressIndex]?.label
+  const progressBarStates = generateProgressBarStates(progressBarStates, currentProgressIndex, packages)
+
+  return progressBarStates[currentProgressIndex]?.label
 }
 
 export function isDelivered(packages: any) {
