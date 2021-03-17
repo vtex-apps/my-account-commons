@@ -5,6 +5,7 @@ import {
 import {
   generatePackageProgressBarStates,
   generateProgressBarStates,
+  getCurrentProgressBarState
 } from './components/ProgressBar/utils'
 import OrderStatus from './components/ProgressBar/OrderStatus'
 import ProgressBar from './components/ProgressBar/ProgressBar'
@@ -21,6 +22,7 @@ const constants = {
 const utils = {
   generatePackageProgressBarStates,
   generateProgressBarStates,
+  getCurrentProgressBarState
 }
 
 export default {
