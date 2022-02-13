@@ -10,10 +10,11 @@ import GenericError from './GenericError'
 class ContentWrapper extends Component {
   state = {
     shouldShowError: false,
+    customMessageError: ''
   }
 
-  handleError = () => {
-    this.setState({ shouldShowError: true })
+  handleError = (customError) => {
+    this.setState({ shouldShowError: true, customMessageError: customError })
   }
 
   handleDismissError = () => {
@@ -32,7 +33,7 @@ class ContentWrapper extends Component {
       namespace,
       hideBackButton = false,
     } = this.props
-    const { shouldShowError } = this.state
+    const { shouldShowError, customMessageError } = this.state
 
     const backButtonConfigs = {
       linkLabel: backButton
@@ -70,6 +71,7 @@ class ContentWrapper extends Component {
                 <GenericError
                   onDismiss={this.handleDismissError}
                   errorId="alert.unknownError"
+                  customError={customMessageError}
                 />
               </div>
             </div>
@@ -95,6 +97,7 @@ ContentWrapper.propTypes = {
   history: ReactRouterPropTypes.history.isRequired,
   hideBackButton: PropTypes.bool,
   headerContent: PropTypes.node,
+  customError: PropTypes.string,
 }
 
 export default injectIntl(withRouter(ContentWrapper))
