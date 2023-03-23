@@ -56,18 +56,23 @@ export function isDelivered(packages: any) {
   }
 
   let isDelivered = true
-  packages
-    .filter((pack: any) => pack?.type === OutputPackageType)
-    .map((pack: any) => {
-      if (
-        !pack.package ||
-        !pack.package.courierStatus ||
-        pack.package.courierStatus.finished === false
-      ) {
-        isDelivered = false
-        return
-      }
-    })
+
+  var outputPackages = packages.filter(
+    (pack: any) => pack?.package?.type === OutputPackageType
+  )
+
+  if (outputPackages.length === 0) return false
+
+  outputPackages.map((pack: any) => {
+    if (
+      !pack.package ||
+      !pack.package.courierStatus ||
+      pack.package.courierStatus.finished === false
+    ) {
+      isDelivered = false
+      return
+    }
+  })
 
   return isDelivered
 }
