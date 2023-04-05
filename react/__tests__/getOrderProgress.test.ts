@@ -144,6 +144,7 @@ describe('getOrderProgress', () => {
         package: {
           trackingNumber: '423243423',
           trackingUrl: 'http://ufcg.edu.br',
+          type: 'Output',
           courierStatus: {
             status: 'unknown',
             finished: false,
