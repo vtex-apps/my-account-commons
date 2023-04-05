@@ -55,26 +55,13 @@ export function isDelivered(packages: any) {
     return false
   }
 
-  let isDelivered = true
+  if (packages == null || packages.length === 0) {
+    return false
+  }
 
-  var outputPackages = packages.filter(
-    (pack: any) => pack?.package?.type === OutputPackageType
+  return packages.some(
+    (pack: any) => pack?.package?.type === OutputPackageType && pack?.package?.courierStatus?.finished)
   )
-
-  if (outputPackages.length === 0) return false
-
-  outputPackages.map((pack: any) => {
-    if (
-      !pack.package ||
-      !pack.package.courierStatus ||
-      pack.package.courierStatus.finished === false
-    ) {
-      isDelivered = false
-      return
-    }
-  })
-
-  return isDelivered
 }
 
 export function generatePackageProgressBarStates(
