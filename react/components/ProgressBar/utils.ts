@@ -56,9 +56,11 @@ export function isDelivered(packages: any) {
   }
 
   const isDelivered = !packages.some(
-    (pack: any) =>
-      pack?.package?.type === OutputPackageType &&
-      !pack?.package?.courierStatus?.finished
+    (pack: any) => {
+      if (!pack?.package) return true // In case you can't tell whether the invoice is input or output, the order as a whole should be considered as not delivered.
+
+      return pack?.package?.type === OutputPackageType &&
+      !pack?.package?.courierStatus?.finished}
   )
 
   return isDelivered
