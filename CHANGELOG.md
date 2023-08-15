@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- `isDelivered` function returns `false` when is not possible to tell whether an invoice is `input` or `output`.
+
 ## [1.7.0] - 2023-06-01
 
 ### Fixed

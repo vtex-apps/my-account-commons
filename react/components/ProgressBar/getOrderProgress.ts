@@ -51,6 +51,7 @@ function isCarrierHandling(packages: any) {
 export default function getOrderProgress(status: string, packages: any) {
   let progress = statusMap[status]
   const isPickup = isOrderPickUp(packages)
+
   if (progress === FOURTH_STEP) {
     if (
       isDelivered(packages) ||
@@ -60,5 +61,6 @@ export default function getOrderProgress(status: string, packages: any) {
       progress = FIFTH_STEP
     }
   }
+
   return progress
 }
