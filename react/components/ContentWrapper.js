@@ -45,7 +45,7 @@ class ContentWrapper extends Component {
 
     return (
       <section className="vtex-account__page w-100 w-80-m">
-        <header>
+        <header className={`${namespace}__header`}>
           <div className="db dn-m">
             <PageHeader
               title={title || intl.formatMessage({ id: titleId })}
