@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Add with the namespace to enable page Header customization at my account.
+
 ## [1.7.1] - 2023-08-15
 
 ### Fixed
