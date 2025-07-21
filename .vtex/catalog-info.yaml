@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-account-commons
+  description: Storefront app that export major my-account components
+  tags:
+    - typescript
+    - react
+  annotations:
+    vtex.com/janus-acronym: ""
+    vtex.com/o11y-os-index: ""
+    grafana/dashboard-selector: ""
+    github.com/project-slug: vtex-apps/my-account-commons
+    vtex.com/platform-flow-id: Shopper#5
+    backstage.io/techdocs-ref: dir:../
+    vtex.com/application-id: Q7WH0XA3
+spec:
+  system: orders
+  lifecycle: stable
+  owner: te-0020
+  type: frontend-ui
+  dependsOn: []
