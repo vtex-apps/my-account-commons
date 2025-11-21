@@ -12,7 +12,7 @@
         when:
           - event: push
             source: branch
-            regex: main
+            regex: master
             path:
               - "docs/**"
               - ".vtex/deployment.yaml"
