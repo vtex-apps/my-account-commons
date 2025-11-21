@@ -1,0 +1,19 @@
+---
+- name: my-account-commons
+  referenceId: Q7WH0XA3
+  description: CI/CD and TechDocs pipeline for my-account-commons
+  build:
+    provider: dkcicd
+    pipelines:
+      - name: techdocs-v1
+        parameters:
+          entityReference: default/component/my-account-commons
+          indexFile: README.md
+        when:
+          - event: push
+            source: branch
+            regex: main
+            path:
+              - "docs/**"
+              - ".vtex/deployment.yaml"
+              - ".vtex/deployment.json"
