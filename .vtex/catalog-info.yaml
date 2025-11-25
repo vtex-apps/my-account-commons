@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: my-account-commons
-  description: Storefront app that export major my-account components
+  description: Storefront app that exports canonical React components for building custom tabs in the VTEX My Account interface
   tags:
     - typescript
     - react
