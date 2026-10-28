@@ -2,7 +2,7 @@
 
 My Account Commons is a bundle of canonical components that can be used to add new tabs to the `vtex.my-account` app.
 
-> VTEX doesn't offer support for a customized My Account. For more information, contact the frontend developer responsible for the module.
+> ℹ️ VTEX doesn't offer support for a customized My Account.
 
 ## Getting started
 
