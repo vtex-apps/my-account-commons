@@ -1,12 +1,12 @@
 # My Account Commons
 
-My Account Commons is a bundle of canonical components that can be used to add new tabs to the `vtex.my-account` app.
+My Account Commons is a bundle of canonical components for adding new tabs to the `vtex.my-account` app.
 
 > ℹ️ VTEX doesn't offer support for a customized My Account.
 
 ## Getting started
 
-The recommended way to add a new tab to My Account is to create a separate app that extends `vtex.my-account`. This app provides the components you need to build the content of that tab. For these components to work, they need to be children of the `vtex.my-account` app.
+The recommended way to add a new tab to My Account is to create a separate app that extends `vtex.my-account`. This app provides the components you need to build the tab's content. For these components to work, they need to be children of the `vtex.my-account` app.
 
 To add a new tab to My Account, follow these steps:
 
@@ -74,7 +74,7 @@ The `ContentWrapper` component has the following props:
 | `namespace`          | `String!`   | CSS namespace that will be added to the page body.                                                                               |
 | `children`           | `Function!` | Function that returns the content of the page. It receives the render prop described below.                                      |
 
-If you don't pass `backButton`, the back button takes the user to the `/` path and uses the default `commons.back` message.
+If you don't pass `backButton`, the back button redirects to the `/` path and uses the default `commons.back` message.
 
 The `ContentWrapper` uses the render prop pattern and returns to its children an object with the following props:
 
@@ -123,7 +123,7 @@ The `GenericError` component has the following props:
 
 ### Router
 
-Exports the `react-router-dom` library. Use it to make sure all apps in the My Account ecosystem use the same version of the router, instead of installing your own.
+Exports the `react-router-dom` library. Use it to ensure all apps in the My Account ecosystem use the same router version, rather than installing your own.
 
 ```jsx
 import React from 'react'
